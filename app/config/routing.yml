@@ -1,3 +1,7 @@
+ae_follow_muscles:
+    resource: "@AEFollowMusclesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
