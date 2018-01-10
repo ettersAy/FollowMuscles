@@ -1,3 +1,12 @@
 ae_muscles:
-    path:     /Muscles
+    path:     /muscles
     defaults: { _controller: AEFollowMusclesBundle:Muscles:index }
+
+ae_muscles_view:
+    path:     /muscles/view/{id}
+    defaults: { _controller: AEFollowMusclesBundle:Muscles:view }
+
+ae_muscles_add:
+    path:     /muscles/add
+    defaults: { _controller: AEFollowMusclesBundle:Muscles:add }
+
