@@ -5,8 +5,22 @@ ae_muscles:
 ae_muscles_view:
     path:     /muscles/view/{id}
     defaults: { _controller: AEFollowMusclesBundle:Muscles:view }
+    requirements:
+        id: \d+
 
 ae_muscles_add:
     path:     /muscles/add
     defaults: { _controller: AEFollowMusclesBundle:Muscles:add }
+
+ae_muscles_add:
+    path:     /muscles/edit/{id}
+    defaults: { _controller: AEFollowMusclesBundle:Muscles:edit }
+    requirements:
+        id: \d+
+
+ae_muscles_add:
+    path:     /muscles/delete/{id}
+    defaults: { _controller: AEFollowMusclesBundle:Muscles:delete }
+    requirements:
+        id: \d+
 
