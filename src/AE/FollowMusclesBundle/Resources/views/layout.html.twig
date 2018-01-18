@@ -1,0 +1,50 @@
+{# src/AE/FollowMusclesBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="follow your muscles. FM allows you to have a complete follow-up of your workout. You would have a backup of your sports sessions. In order to know which muscle you have stimulated and which ones you have forgotten. Customize your sports programs according to your own abilities and goals.">
+    <meta name="author" content="ETTERS Ayoub">
+    
+    <title>{% block title %}AE Folllow msucles{% endblock %}</title>
+     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/FollowMuscles/web/vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+    
+    <!-- Custom styles for this template -->
+    <link href="/FollowMuscles/web/css/shop-homepage.css" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+
+    <!-- Navigation navbar.html.twig-->
+    {{ include("AEFollowMusclesBundle::navbar.html.twig") }}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <!-- leftbar.html.twig-->
+        {{ include("AEFollowMusclesBundle::leftbar.html.twig") }}
+
+        <!-- /.col-lg-3 -->
+        {% block body %}
+        {% endblock %}
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- footer.html.twig -->
+    {{ include("AEFollowMusclesBundle::footer.html.twig") }}
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="/FollowMuscles/web/vendor/jquery/jquery.min.js"></script>
+    <script src="/FollowMuscles/web/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>

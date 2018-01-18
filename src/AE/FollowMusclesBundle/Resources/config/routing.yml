@@ -1,3 +1,6 @@
+ae_index:
+    path:     /
+    defaults: { _controller: AEFollowMusclesBundle:Muscles:index }
 ae_muscles:
     path:     /muscles
     defaults: { _controller: AEFollowMusclesBundle:Muscles:index }
