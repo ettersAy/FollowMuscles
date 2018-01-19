@@ -13,8 +13,17 @@ class MusclesController extends Controller
 {
   public function indexAction()
   {
+    $muscle = [
+      'name' => 'dorsal',
+      'description' => 'description',
+      'state' => 'done',
+      'imgSrc' => 'muscles/dorsal/dorsaux-small-01.jpg'
+    ];
+    $listMuscles[] = $muscle;
+    $listMuscles[] = $muscle;
+    $listMuscles[] = $muscle;
     $content = $this->get('templating')->render(
-      'AEFollowMusclesBundle:Muscles:index.html.twig'
+      'AEFollowMusclesBundle:muscles:index.html.twig', compact('listMuscles')
     );
     
     return new Response($content);
@@ -23,7 +32,7 @@ class MusclesController extends Controller
   public function viewAction($id)
   {
     return $this->get('templating')->renderResponse(
-      'AEFollowMusclesBundle:Muscles:view.html.twig',
+      'AEFollowMusclesBundle:muscles:view.html.twig',
       array('id'  => $id)
     );
   }
@@ -43,7 +52,7 @@ class MusclesController extends Controller
     }
 
     // Si on n'est pas en POST, alors on affiche le formulaire
-    return $this->render( 'AEFollowMusclesBundle:Muscles:add.html.twig');
+    return $this->render( 'AEFollowMusclesBundle:muscles:add.html.twig');
   }
 
   public function editAction($id)
@@ -57,7 +66,7 @@ class MusclesController extends Controller
       return $this->redirectToRoute('ae_muscles_view', array('id' => 5));
     }
     return $this->get('templating')->renderResponse(
-      'AEFollowMusclesBundle:Muscles:edit.html.twig',
+      'AEFollowMusclesBundle:muscles:edit.html.twig',
       array('id'  => $id)
     );
   }
@@ -65,7 +74,7 @@ class MusclesController extends Controller
   public function deleteAction($id)
   {
     return $this->get('templating')->renderResponse(
-      'AEFollowMusclesBundle:Muscles:delete.html.twig',
+      'AEFollowMusclesBundle:muscles:delete.html.twig',
       array('id'  => $id)
     );
   }

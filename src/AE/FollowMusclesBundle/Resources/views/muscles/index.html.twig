@@ -1,0 +1,24 @@
+{# src/AE/FollowMusclesBundle/Resources/views/Muscles/index.html.twig #}
+
+{% extends "AEFollowMusclesBundle::layout.html.twig" %}
+
+{% block body %}
+
+ 
+        <div class="col-lg-9">
+
+          <!-- carouselIndicators.html.twig-->
+          {{ include("AEFollowMusclesBundle:muscles:partials/carouselIndicators.html.twig") }}
+
+          <div class="row">
+            {% for muscle in listMuscles %}
+              <!-- carouselIndicators.html.twig-->
+              {{ include("AEFollowMusclesBundle:muscles:partials/muscleState.html.twig", {'muscle': muscle}) }}
+            {% endfor %}
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+{% endblock %}
