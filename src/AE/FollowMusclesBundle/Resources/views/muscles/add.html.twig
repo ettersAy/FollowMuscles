@@ -1,11 +1,52 @@
 {# src/AE/FollowMusclesBundle/Resources/views/Muscles/add.html.twig #}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ADD Muscle</title>
-  </head>
-  <body>
-    <h1>Muscle n° ... !</h1>
-  </body>
-</html>
+<div class="modal fade" id="modalAddMuscles" tabindex="-1" role="dialog" aria-labelledby="modalAddMuscles" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAddMusclesLabel">Add new muscle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-add-muscles" enctype="multipart/form-data">
+          <!-- Muscle name -->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="muscle-name">Muscle name : </span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="muscle-name"/>
+          </div>
+          
+          <!-- Muscle photo 700*700 -->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Photo 700*700 : </span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="large-muscle-photo"/>
+              <label class="custom-file-label" for="large-muscle-photo">Choose photo</label>
+            </div>
+          </div>
+          
+          <!-- Muscle photo 250*144 -->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Photo 250*144 : </span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="small-muscle-photo"/>
+              <label class="custom-file-label" for="small-muscle-photo">Choose photo</label>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="add-muscle">Add muscle</button>
+      </div>
+    </div>
+  </div>
+</div>

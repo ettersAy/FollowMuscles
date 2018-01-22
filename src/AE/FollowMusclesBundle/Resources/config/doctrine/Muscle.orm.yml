@@ -1,0 +1,21 @@
+AE\FollowMusclesBundle\Entity\Muscle:
+    type: entity
+    table: null
+    repositoryClass: AE\FollowMusclesBundle\Repository\MuscleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+        photoLarge:
+            type: string
+            length: 255
+        photoSmall:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

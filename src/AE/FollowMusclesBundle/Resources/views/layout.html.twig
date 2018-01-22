@@ -9,8 +9,11 @@
     <meta name="author" content="ETTERS Ayoub">
     
     <title>{% block title %}AE Folllow msucles{% endblock %}</title>
-     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/FollowMuscles/web/vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+    
+    <!-- https://getbootstrap.com/docs/4.0/components/input-group/ -->
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/FollowMuscles/web/css/bootstrap.min.css" type="text/css" />
     
     <!-- Custom styles for this template -->
     <link href="/FollowMuscles/web/css/shop-homepage.css" rel="stylesheet">
@@ -19,6 +22,9 @@
   
   <body>
 
+    <!-- Modal add muscles-->
+    {{ include("AEFollowMusclesBundle:muscles:add.html.twig") }}
+    
     <!-- Navigation navbar.html.twig-->
     {{ include("AEFollowMusclesBundle::navbar.html.twig") }}
 
@@ -43,8 +49,12 @@
     {{ include("AEFollowMusclesBundle::footer.html.twig") }}
     
     <!-- Bootstrap core JavaScript -->
-    <script src="/FollowMuscles/web/vendor/jquery/jquery.min.js"></script>
-    <script src="/FollowMuscles/web/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/FollowMuscles/web/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/FollowMuscles/web/js/popper.min.js"></script>
+    <script src="/FollowMuscles/web/js/bootstrap.min.js"></script>
+    
+    <!-- JS  -->
+    <script src="/FollowMuscles/web/js/FollowMuscles.js"></script>
     
   </body>
 </html>
